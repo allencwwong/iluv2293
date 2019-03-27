@@ -13,9 +13,15 @@ if (
 // fetch randomThoughts from data/json
 console.log("test");
 
+// helper functions
+
+var getEl = function(element) {
+    return document.querySelector(element);
+};
+
 // var jsonURL = "/assets/js/randomThoughts.json";
 var jsonURL =
-    "https://s.yimg.com/cv/apiv2/default/sites/billboard/assets/js/randomThoughts.json";
+    "https://s.yimg.com/cv/apiv2/default/sites/billboard/assets/js/randomThoughts2.json";
 
 function fetchRandomThoughts() {
     return fetch(jsonURL)
@@ -30,43 +36,77 @@ function fetchRandomThoughts() {
 fetchRandomThoughts().then(function(result) {
     // generate a single quote from random thoughts
     var currRandomNo;
-    var generateRandomThoughts = function() {
-        getEl(".random-thoughts-btn").addEventListener("click", function() {
+    var generateRandomThoughts = function(eventTrigger) {
+        eventTrigger.addEventListener("click", function() {
+            console.log('click works')
             var randomGenerator = Math.floor(
                 Math.random() * result.randomThoughts.length
             );
             // prevent showing same random
             if (currRandomNo !== randomGenerator) {
                 currRandomNo = randomGenerator;
-                console.log(randomGenerator);
+                console.log(result.randomThoughts[randomGenerator]);
+                // set random thought
+                getEl(".yahoo-billboard-copy").innerHTML =
+                    result.randomThoughts[randomGenerator];
             } else {
                 // unbind eventlistener to run function again
-                getEl(".random-thoughts-btn").removeEventListener(
+                eventTrigger.removeEventListener(
                     "click",
                     function() {
-                        generateRandomThoughts();
+                        generateRandomThoughts(eventTrigger);
                     }
                 );
+                eventTrigger.click();
             }
         });
     };
-    generateRandomThoughts();
+
+        // desktop onclick RTs event
+        var eventTrigger = getEl('.random-thoughts-btn');
+        generateRandomThoughts(eventTrigger);
+        eventTrigger.click();
+        // mobile onclick RTs event
+        var eventTrigger2 = getEl('.random-thoughts-btn-footer');
+        generateRandomThoughts(eventTrigger2);
+        eventTrigger2.click();
+
 });
 
-// th: 2132 tb: 1130 53%
-// tw: 2162 tb: 741 34.2%
+window.onresize = function(event) {
+    console.log("resized");
+    setRandomThoughtsToBB();
+};
 
-// look for img container use it as the realtive container for RTs
 // relative container height - image height = starting point calc
 // 53% down and 34.3% left for RTs or addClass to that RTs div
 
-// document.querySelector(".yahoo-billboard")
+var setRandomThoughtsToBB = function() {
+    var billboardContainerHeight = getEl(".billboard-left").clientHeight,
+        yahooBillboardHeight = getEl(".yahoo-billboard").clientHeight,
+        yahooBillboardWidth = getEl(".yahoo-billboard").clientWidth,
+        startHeight = billboardContainerHeight - yahooBillboardHeight,
+        adjustedTop = 0.55 * yahooBillboardHeight + startHeight,
+        adjustedLeft = 0.38 * yahooBillboardWidth + 15,
+        adjustedWidth = 0.41 * yahooBillboardWidth,
+        adjustedHeight = 0.092 * yahooBillboardWidth;
 
-// helper functions
-
-var getEl = function(element) {
-    return document.querySelector(element);
+        console.log('bb',billboardContainerHeight,'ybb',yahooBillboardHeight,'start',startHeight);
+    // set diff mobile sizing
+    if(document.documentElement.clientWidth < 768){
+        adjustedLeft = 0.37 * yahooBillboardWidth;
+    }
+    
+    // set random thought container alignment
+    getEl(".yahoo-billboard-container").style.top = adjustedTop + "px";
+    getEl(".yahoo-billboard-container").style.left = adjustedLeft + "px";
+    getEl(".yahoo-billboard-container").style.width = adjustedWidth + "px";
+    getEl(".yahoo-billboard-container").style.height = adjustedHeight + "px";
+    // set right copy container
+    getEl('.copy-container .text-vertical').style.marginTop = (startHeight/2.5) + "px";
 };
+
+setRandomThoughtsToBB();
 
 // set rapid tracking spaceid
 // function getRapidConfig(spaceid) {

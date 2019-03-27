@@ -15,11 +15,50 @@
     font-weight: 700;
 	font-style: normal;
 }
-        
+
+/* utility  */
 .mw-1800{
     max-width: 1800px;
     margin:0 auto;
 }
+.relative{
+    position:relative;
+}
+
+.text-vertical{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+/*  due to text-vertical is absolute when text overflow it overlap top/bottom content this create hidden space for overflow text */
+.text-vertical-height{
+    visibility: hidden;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+/* >768, 768 , 992 , 1200  */
+@media (min-width:320px){
+    .hide-md{
+        display:none;
+    }  
+    .show-md{
+        display:block;
+    }
+}
+@media (min-width:992px) {
+    .hide-md{
+        display:block;
+    }
+    .show-md{
+        display:none;
+    }
+}
+
 .billboard-bg{
     position: fixed;
     top:0;
@@ -30,41 +69,177 @@
     background-size: cover;
 }
 
+@media (min-width:320px){
+/* billboard left side  */
+
 .billboard-left{
-    height:91vh;
-}
-
-main .text-vertical{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    text-align: center;
-}
-
-/*  due to text-vertical is absolute when text overflow it overlap top/bottom content this create hidden space for overflow text */
-main .text-vertical-height{
-    visibility: hidden;
-    width: 100%;
-    top: 0;
-    left: 0;
     position: relative;
+    height:66vh;
 }
 
 .yahoo-billboard{
     position: absolute;
     max-width:1000px;
-    width:100%;
+    width:97%;
     bottom:0;
+    left:0;
 }
 
-.billboard-right h1{
-    font-family: 'Yahoo-Sans' , 
-}
-
-.footer{
+.yahoo-billboard-container{
     position: absolute;
-    bottom: 0;
-    background-color: #151218;
-    height: 10vh;
-    width:100vw;
+    top:0;
+    left:0;
+    width:0px;
+    height:0px;
+    z-index: 999;
+    transform: rotate(6.6deg) skew(8deg);
+    color:#fff;
+    font-family: 'Yahoo-Sans', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.yahoo-billboard-container .relative{
+    width:100%;
+    height:100%;
+}
+
+.yahoo-billboard-copy{
+    width:100%;
+    font-size:12px;
+}    
+    /* billboard right side */
+    .billboard-right{
+        position:relative;
+        width:100%;
+        height:100%;
+    }
+    .billboard-right .copy-container{
+        width:100%;
+        left:0;
+    }
+    
+    .billboard-right h1,.billboard-right p,.random-thoughts-btn,.random-thoughts-btn-footer{
+        font-family: 'Yahoo-Sans', Arial, Helvetica, sans-serif;
+        color:#fff;
+    }
+    .billboard-right h1{
+        font-size:32px;
+        font-weight: 700;
+        margin:.5rem 0;
+    }
+    .billboard-right p{
+        font-weight: 400;
+        font-size:14px;
+        line-height:20px;
+        margin:0 0 2rem 0;
+    }
+    
+    .random-thoughts-btn,.random-thoughts-btn-footer{
+        border-radius:25px;
+        padding:.8rem 2rem;
+        border:3px solid #fff;
+        font-weight:700;
+        text-decoration:none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .random-thoughts-btn:focus,.random-thoughts-btn-footer:focus{
+        outline:0;
+    }
+    .footer{
+        position: absolute;
+        bottom: 0;
+        background-color: #151218;
+        height: 35vh;
+        width:100vw;
+    }
+    .footer .home-icon{
+        height: 4vh;
+        margin-top:2rem;
+    }
+}
+
+@media (min-width:600px){
+    .yahoo-billboard-copy{
+        font-size:14px;
+    }    
+    .footer .home-icon{
+        height: 4vh;
+        margin-top:3rem;
+    }
+}
+
+@media (min-width:768px){
+    .yahoo-billboard{
+        width:100%;
+        left:3%;
+    }    
+    .billboard-right h1{
+        font-size:38px;
+        font-weight: 700;
+    }
+    .billboard-right p{
+        font-size:20px;
+        line-height:28px;
+        margin:0 0 3rem 0;
+    }
+}
+
+@media (min-width:992px){
+    .billboard-left{
+        position: relative;
+        height:91vh;
+    }
+    .billboard-right{
+        height:auto;
+    }
+    .billboard-right .copy-container{
+        padding-left:3%;
+    }    
+
+    .billboard-right h1{
+        font-size:36px;
+        font-weight: 700;
+    }
+    .billboard-right p{
+        font-weight: 400;
+        font-size:18px;
+        line-height:22px;
+        margin:0 0 4rem 0;
+    }    
+
+    .footer{
+        position: absolute;
+        bottom: 0;
+        background-color: #151218;
+        height: 10vh;
+        width:100vw;
+    }    
+
+    .footer .home-icon{
+        height: 6vh;
+        margin-top:2vh;
+        float:right;
+    }
+}
+
+@media (min-width:1200px){
+    .yahoo-billboard-copy{
+        font-size:16px;
+    }   
+    .billboard-right h1{
+        font-size:42px;
+        font-weight: 700;
+    }
+    .billboard-right p{
+        font-weight: 400;
+        font-size:24px;
+        line-height:28px;
+    }    
 }
