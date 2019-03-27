@@ -1,0 +1,25 @@
+{
+  "name": "vzmedia",
+  "version": "1.0.0",
+  "description": "Verizon Media Website",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "html-minifier": "^3.5.21",
+    "uglify-js": "^3.4.9",
+    "uglifycss": "0.0.29"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uglifycss": "node ./bin/uglifycss",
+    "uglifyjs": "node ./bin/uglifyjs",
+    "minifyhtml": "node ./bin/minifyhtml",
+    "preprocess": "npm run uglifycss && npm run uglifyjs && npm run minifyhtml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.ouroath.com:bcg/vzmedia.git"
+  },
+  "author": "Suresh Kumar Muthumal <sureshkm@oath.com>",
+  "license": "ISC"
+}
