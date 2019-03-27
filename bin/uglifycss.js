@@ -14,7 +14,7 @@ const uglified = uglifycss.processFiles(
 );
 
 // inject the AWS S3 URL for all the assets
-const imagified = uglified.replace(/\/assets/g, AWSS3_URL);
+const imagified = uglified.replace(/\.\.\/\.\.\/assets/g, AWSS3_URL);
 
 fs.writeFile("build/bundle-1.0.0.css", imagified, function(err) {
     if (err) throw err;

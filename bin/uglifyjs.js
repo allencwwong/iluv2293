@@ -10,6 +10,14 @@ var options = {
 };
 const uglified = uglifyJS.minify(
     {
+        [`${ASSETS_PATH}/js/es6-promise.js`]: fs.readFileSync(
+            `${ASSETS_PATH}/js/es6-promise.js`,
+            "utf8"
+        ),
+        [`${ASSETS_PATH}/js/fetch.umd.js`]: fs.readFileSync(
+            `${ASSETS_PATH}/js/fetch.umd.js`,
+            "utf8"
+        ),
         [`${ASSETS_PATH}/js/index.js`]: fs.readFileSync(
             `${ASSETS_PATH}/js/index.js`,
             "utf8"
@@ -17,7 +25,7 @@ const uglified = uglifyJS.minify(
     },
     options
 ).code;
-const datafied = uglified.replace(/\/assets/g, AWSS3_URL);
+const datafied = uglified.replace(/\.\/assets/g, AWSS3_URL);
 
 fs.writeFileSync("build/bundle-1.0.0.js", datafied, "utf8");
 

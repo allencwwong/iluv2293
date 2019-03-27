@@ -1,7 +1,7 @@
 {
-  "name": "vzmedia",
+  "name": "yahoobillboard",
   "version": "1.0.0",
-  "description": "Verizon Media Website",
+  "description": "Yahoo Billboard",
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
@@ -18,8 +18,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.ouroath.com:bcg/vzmedia.git"
+    "url": ""
   },
-  "author": "Suresh Kumar Muthumal <sureshkm@oath.com>",
+  "author": "Allen Wong <allenwong@verizonmedia.com>",
   "license": "ISC"
 }
