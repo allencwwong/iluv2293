@@ -24,14 +24,12 @@
 .relative{
     position:relative;
 }
-
 .text-vertical{
     position: absolute;
     top:50%;
     transform: translateY(-50%);
     text-align: center;
 }
-
 /*  due to text-vertical is absolute when text overflow it overlap top/bottom content this create hidden space for overflow text */
 .text-vertical-height{
     visibility: hidden;
@@ -40,27 +38,14 @@
     left: 0;
     position: relative;
 }
-
-/* >768, 768 , 992 , 1200  */
-@media (min-width:320px){
-    .hide-md{
-        display:none;
-    }  
-    .show-md{
-        display:block;
-    }
+.hide-md{
+    display:none;
+}  
+.show-md{
+    display:block;
 }
-@media (min-width:992px) {
-    .hide-md{
-        display:block;
-    }
-    .show-md{
-        display:none;
-    }
-}
-
 .billboard-bg{
-    position: fixed;
+    position: absolute;
     top:0;
     left:0;
     width:100%;
@@ -69,14 +54,12 @@
     background-size: cover;
 }
 
-@media (min-width:320px){
-/* billboard left side  */
 
+/* billboard left side  */
 .billboard-left{
     position: relative;
     height:66vh;
 }
-
 .yahoo-billboard{
     position: absolute;
     max-width:1000px;
@@ -84,7 +67,6 @@
     bottom:0;
     left:0;
 }
-
 .yahoo-billboard-container{
     position: absolute;
     top:0;
@@ -98,31 +80,82 @@
     font-weight: 700;
     text-align: center;
 }
-
 .yahoo-billboard-container .relative{
     width:100%;
     height:100%;
 }
-
 .yahoo-billboard-copy{
     width:100%;
-    font-size:12px;
+    font-size:8px;
 }    
-    /* billboard right side */
-    .billboard-right{
-        position:relative;
+/* billboard right side */
+.billboard-right{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.billboard-right .copy-container{
+    width:100%;
+    left:0;
+}
+.billboard-right h1,.billboard-right p,.random-thoughts-btn,.random-thoughts-btn-footer{
+    font-family: 'Yahoo-Sans', Arial, Helvetica, sans-serif;
+    color:#fff;
+}
+.billboard-right h1{
+    font-size:28px;
+    font-weight: 700;
+    margin:.5rem 0;
+    color:#dfcec8;
+}
+.billboard-right p{
+    font-weight: 400;
+    font-size:12px;
+    line-height:20px;
+    margin:0 0 1.5rem 0;
+    color:#dfcec8;
+}
+.random-thoughts-btn,.random-thoughts-btn-footer{
+    border-radius:25px;
+    padding:.6rem 1.5rem;
+    font-weight:700;
+    font-size:14px;
+    text-decoration:none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.random-thoughts-btn{
+    border:3px solid #fff;
+    color:#fff;
+}
+.random-thoughts-btn-footer{
+    border:3px solid #dfcec8;
+    color:#dfcec8;    
+}
+.random-thoughts-btn:focus,.random-thoughts-btn-footer:focus{
+    outline:0;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #151218;
+    height: 35vh;
+    width:100vw;
+}
+.footer .home-icon{
+    height: 4vh;
+    margin-top:1.5rem;
+}
+
+@media (min-width:400px){
+    .yahoo-billboard-copy{
         width:100%;
-        height:100%;
-    }
-    .billboard-right .copy-container{
-        width:100%;
-        left:0;
-    }
-    
-    .billboard-right h1,.billboard-right p,.random-thoughts-btn,.random-thoughts-btn-footer{
-        font-family: 'Yahoo-Sans', Arial, Helvetica, sans-serif;
-        color:#fff;
-    }
+    }        
     .billboard-right h1{
         font-size:32px;
         font-weight: 700;
@@ -134,38 +167,16 @@
         line-height:20px;
         margin:0 0 2rem 0;
     }
-    
     .random-thoughts-btn,.random-thoughts-btn-footer{
         border-radius:25px;
         padding:.8rem 2rem;
-        border:3px solid #fff;
-        font-weight:700;
-        text-decoration:none;
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    .random-thoughts-btn:focus,.random-thoughts-btn-footer:focus{
-        outline:0;
-    }
-    .footer{
-        position: absolute;
-        bottom: 0;
-        background-color: #151218;
-        height: 35vh;
-        width:100vw;
-    }
-    .footer .home-icon{
-        height: 4vh;
-        margin-top:2rem;
-    }
+        font-size:16px;
+    }    
 }
-
-@media (min-width:600px){
+@media (min-width:576px){
+    .billboard-bg{
+        position: fixed;
+    }
     .yahoo-billboard-copy{
         font-size:14px;
     }    
@@ -174,7 +185,6 @@
         margin-top:3rem;
     }
 }
-
 @media (min-width:768px){
     .yahoo-billboard{
         width:100%;
@@ -190,8 +200,13 @@
         margin:0 0 3rem 0;
     }
 }
-
 @media (min-width:992px){
+    .hide-md{
+        display:block;
+    }
+    .show-md{
+        display:none;
+    }
     .billboard-left{
         position: relative;
         height:91vh;
@@ -202,16 +217,20 @@
     .billboard-right .copy-container{
         padding-left:3%;
     }    
-
+    .billboard-right .copy-container .text-vertical{
+        padding-right:2rem;
+    }
     .billboard-right h1{
         font-size:36px;
         font-weight: 700;
+        color:#fff;
     }
     .billboard-right p{
         font-weight: 400;
         font-size:18px;
         line-height:22px;
         margin:0 0 4rem 0;
+        color:#fff;
     }    
 
     .footer{
@@ -239,6 +258,13 @@
     }
     .billboard-right p{
         font-weight: 400;
+        font-size:22px;
+        line-height:26px;
+    }    
+}
+
+@media (min-width:1400px){
+    .billboard-right p{
         font-size:24px;
         line-height:28px;
     }    

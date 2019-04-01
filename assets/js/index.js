@@ -10,20 +10,17 @@ if (
     // var rapidConfig = getRapidConfig(1197807547);
 }
 
-// fetch randomThoughts from data/json
-console.log("test");
-
 // helper functions
-
 var getEl = function(element) {
     return document.querySelector(element);
 };
 
-// var jsonURL = "/assets/js/randomThoughts.json";
+// fetch randomThoughts from data/json
 var jsonURL =
-    "https://s.yimg.com/cv/apiv2/default/sites/billboard/assets/js/randomThoughts2.json";
+    "https://s.yimg.com/cv/apiv2/default/sites/billboard/assets/js/randomThoughts3.json";
 
 function fetchRandomThoughts() {
+    getEl(".yahoo-billboard-copy").innerHTML = "brewing...";
     return fetch(jsonURL)
         .then(function(response) {
             return response.json();
@@ -38,43 +35,36 @@ fetchRandomThoughts().then(function(result) {
     var currRandomNo;
     var generateRandomThoughts = function(eventTrigger) {
         eventTrigger.addEventListener("click", function() {
-            console.log('click works')
             var randomGenerator = Math.floor(
                 Math.random() * result.randomThoughts.length
             );
             // prevent showing same random
             if (currRandomNo !== randomGenerator) {
                 currRandomNo = randomGenerator;
-                console.log(result.randomThoughts[randomGenerator]);
                 // set random thought
                 getEl(".yahoo-billboard-copy").innerHTML =
                     result.randomThoughts[randomGenerator];
             } else {
                 // unbind eventlistener to run function again
-                eventTrigger.removeEventListener(
-                    "click",
-                    function() {
-                        generateRandomThoughts(eventTrigger);
-                    }
-                );
+                eventTrigger.removeEventListener("click", function() {
+                    generateRandomThoughts(eventTrigger);
+                });
                 eventTrigger.click();
             }
         });
     };
 
-        // desktop onclick RTs event
-        var eventTrigger = getEl('.random-thoughts-btn');
-        generateRandomThoughts(eventTrigger);
-        eventTrigger.click();
-        // mobile onclick RTs event
-        var eventTrigger2 = getEl('.random-thoughts-btn-footer');
-        generateRandomThoughts(eventTrigger2);
-        eventTrigger2.click();
-
+    // desktop onclick RTs event
+    var eventTrigger = getEl(".random-thoughts-btn");
+    generateRandomThoughts(eventTrigger);
+    eventTrigger.click();
+    // mobile onclick RTs event
+    var eventTrigger2 = getEl(".random-thoughts-btn-footer");
+    generateRandomThoughts(eventTrigger2);
+    eventTrigger2.click();
 });
 
 window.onresize = function(event) {
-    console.log("resized");
     setRandomThoughtsToBB();
 };
 
@@ -91,19 +81,19 @@ var setRandomThoughtsToBB = function() {
         adjustedWidth = 0.41 * yahooBillboardWidth,
         adjustedHeight = 0.092 * yahooBillboardWidth;
 
-        console.log('bb',billboardContainerHeight,'ybb',yahooBillboardHeight,'start',startHeight);
     // set diff mobile sizing
-    if(document.documentElement.clientWidth < 768){
+    if (document.documentElement.clientWidth < 768) {
         adjustedLeft = 0.37 * yahooBillboardWidth;
     }
-    
+
     // set random thought container alignment
     getEl(".yahoo-billboard-container").style.top = adjustedTop + "px";
     getEl(".yahoo-billboard-container").style.left = adjustedLeft + "px";
     getEl(".yahoo-billboard-container").style.width = adjustedWidth + "px";
     getEl(".yahoo-billboard-container").style.height = adjustedHeight + "px";
     // set right copy container
-    getEl('.copy-container .text-vertical').style.marginTop = (startHeight/2.5) + "px";
+    getEl(".copy-container .text-vertical").style.marginTop =
+        startHeight / 2.5 + "px";
 };
 
 setRandomThoughtsToBB();
