@@ -1,6 +1,6 @@
 const fs = require("fs"),
     uglifyJS = require("uglify-js"),
-    AWSS3_URL = "https://s.yimg.com/cv/apiv2/default/sites/billboard/assets",
+    AWSS3_URL = "https://s.yimg.com/cv/apiv2/default/yahoo/bb/assets",
     ASSETS_PATH = "./assets/";
 
 // preprocess all the given JS files
@@ -27,6 +27,6 @@ const uglified = uglifyJS.minify(
 ).code;
 const datafied = uglified.replace(/\.\/assets/g, AWSS3_URL);
 
-fs.writeFileSync("build/bundle-1.0.0.js", datafied, "utf8");
+fs.writeFileSync("build/bundle-1.0.9.js", datafied, "utf8");
 
 console.log("Successfully JS uglified.");

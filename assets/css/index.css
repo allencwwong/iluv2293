@@ -1,271 +1,230 @@
 @font-face {
     font-family: "Yahoo-Sans-Regular";
-    src: url("../../assets/fonts/Yahoo-Sans-Regular.eot") format("embedded-opentype"),
-		 url("../../assets/fonts/Yahoo-Sans-Regular.woff2") format("woff2"),
-		 url("../../assets/fonts/Yahoo-Sans-Regular.ttf") format("truetype");
+    src: url("../../assets/fonts/Yahoo-Sans-Regular.eot")
+            format("embedded-opentype"),
+        url("../../assets/fonts/Yahoo-Sans-Regular.woff2") format("woff2"),
+        url("../../assets/fonts/Yahoo-Sans-Regular.ttf") format("truetype");
     font-weight: 400;
-	font-style: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Yahoo-Sans-Bold";
-    src: url("../../assets/fonts/Yahoo-Sans-Bold.eot") format("embedded-opentype"),
-		 url("../../assets/fonts/Yahoo-Sans-Bold.woff") format("woff"),
-		 url("../../assets/fonts/Yahoo-Sans-Bold.ttf") format("truetype");
+    src: url("../../assets/fonts/Yahoo-Sans-Bold.eot")
+            format("embedded-opentype"),
+        url("../../assets/fonts/Yahoo-Sans-Bold.woff") format("woff"),
+        url("../../assets/fonts/Yahoo-Sans-Bold.ttf") format("truetype");
     font-weight: 700;
-	font-style: normal;
+    font-style: normal;
+}
+/* Style  */
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:active, .ott a:hover, .oot a:visited{
+    color: inherit;
 }
 
-/* utility  */
-.mw-1800{
-    max-width: 1800px;
-    margin:0 auto;
+.align-center{
+    display: block;
+    margin: 0 auto;
 }
-.relative{
-    position:relative;
+
+.heading{
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 20px;
 }
-.text-vertical{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
+
+.heading2{
+    font-size: 36x;
+    margin: 0;
+    padding: 40px 0 10px 0;
+}
+
+.paragraph{
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 25px;
+}
+
+@media (min-width: 768px){
+    .heading{
+        font-size: 75px;
+        padding-bottom: 25px;
+    }
+    
+    .heading2{
+        font-size: 55x;
+        padding: 60px 0 20px 0;
+    }  
+    .paragraph{
+        font-size: 24px;
+        line-height: 36px;
+        padding-bottom: 45px;
+    }
+}
+
+
+.oot .btn{
+    padding: 7px 5px;
+    border-width:2px;
+    border-style: solid;
+    width: 128px;
+    height: 32px;
+    box-sizing: border-box;
+    border-radius: 5px;
     text-align: center;
+    font-size: 13px;
 }
-/*  due to text-vertical is absolute when text overflow it overlap top/bottom content this create hidden space for overflow text */
-.text-vertical-height{
-    visibility: hidden;
-    width: 100%;
+
+.btn.btn-primary{
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn.btn-secondary{
+    padding-top: 10px;
+    border-color: #999;
+    color: #1679cc;
+    width: 180px;
+    height: 48px;
+    font-size: 22px;
+}
+
+@media (min-width: 768px){
+    .oot .btn{
+        padding: 14px 10px;
+        border-width:2px;
+        border-style: solid;
+        width: 256px;
+        height: 64px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 26px;
+    }
+    .btn.btn-secondary{
+        width: 256px;
+        height: 64px;
+    }
+}
+
+
+/* Utility  */
+.oot .aspect-16-9 {
+    position: relative;
+    background: #000;
+    padding-top: 28.125%;
+    padding-bottom: 28.125%;
+    overflow: hidden;
+    height: 0;
+}
+.oot .aspect-16-9 iframe,
+.oot .aspect-16-9 object,
+.oot .aspect-16-9 embed {
+    position: absolute;
     top: 0;
     left: 0;
-    position: relative;
+    width: 100%;
+    height: 100%;
 }
-.hide-md{
-    display:none;
-}  
-.show-md{
-    display:block;
+
+/* Header */
+header{
+    height: 146px;
+    padding-top: 45px;
 }
-.billboard-bg{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    background: url(../../assets/images/sunset-bg-with-birds.jpg) no-repeat center center fixed;
+
+header .logo{
+    width: 260px;
+    height: auto;
+}
+
+@media (min-width: 768px){
+    header .logo{
+        margin-left: -40px;
+    }
+}
+
+header .header-cta a{
+    float: right;
+}
+
+@media (min-width: 768px){
+    header .header-cta a{
+        margin-right: -30px;
+    }
+}
+
+/* Hero section */
+.oot .section-intro {
+    background: url(./../images/gradient-bg.png) no-repeat center center;
     background-size: cover;
+    margin-bottom: 32px;
 }
 
+@media (min-width: 768px){
+    .oot .section-intro {
+        margin-bottom: 64px;
+    }  
+}
 
-/* billboard left side  */
-.billboard-left{
-    position: relative;
-    height:66vh;
-}
-.yahoo-billboard{
-    position: absolute;
-    max-width:1000px;
-    width:97%;
-    bottom:0;
-    left:0;
-}
-.yahoo-billboard-container{
-    position: absolute;
-    top:0;
-    left:0;
-    width:0px;
-    height:0px;
-    z-index: 999;
-    transform: rotate(6.6deg) skew(8deg);
-    color:#fff;
-    font-family: 'Yahoo-Sans', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+.oot .section-hero{
     text-align: center;
 }
-.yahoo-billboard-container .relative{
-    width:100%;
-    height:100%;
-}
-.yahoo-billboard-copy{
-    width:100%;
-    font-size:8px;
-}    
-/* billboard right side */
-.billboard-right{
-    position:relative;
-    width:100%;
-    height:100%;
-}
-.billboard-right .copy-container{
-    width:100%;
-    left:0;
-}
-.billboard-right h1,.billboard-right p,.random-thoughts-btn,.random-thoughts-btn-footer{
-    font-family: 'Yahoo-Sans', Arial, Helvetica, sans-serif;
-    color:#fff;
-}
-.billboard-right h1{
-    font-size:28px;
-    font-weight: 700;
-    margin:.5rem 0;
-    color:#dfcec8;
-}
-.billboard-right p{
-    font-weight: 400;
-    font-size:12px;
-    line-height:20px;
-    margin:0 0 1.5rem 0;
-    color:#dfcec8;
-}
-.random-thoughts-btn,.random-thoughts-btn-footer{
-    border-radius:25px;
-    padding:.6rem 1.5rem;
-    font-weight:700;
-    font-size:14px;
-    text-decoration:none;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.random-thoughts-btn{
-    border:3px solid #fff;
-    color:#fff;
-}
-.random-thoughts-btn-footer{
-    border:3px solid #dfcec8;
-    color:#dfcec8;    
-}
-.random-thoughts-btn:focus,.random-thoughts-btn-footer:focus{
-    outline:0;
-}
-.footer{
-    position: absolute;
-    bottom: 0;
-    background-color: #151218;
-    height: 35vh;
-    width:100vw;
-}
-.footer .home-icon{
-    height: 4vh;
-    margin-top:1.5rem;
+
+.section-hero .heading{
+    color: #fff;
 }
 
-@media (min-width:400px){
-    .yahoo-billboard-copy{
-        width:100%;
-    }        
-    .billboard-right h1{
-        font-size:32px;
-        font-weight: 700;
-        margin:.5rem 0;
-    }
-    .billboard-right p{
-        font-weight: 400;
-        font-size:14px;
-        line-height:20px;
-        margin:0 0 2rem 0;
-    }
-    .random-thoughts-btn,.random-thoughts-btn-footer{
-        border-radius:25px;
-        padding:.8rem 2rem;
-        font-size:16px;
-    }    
-}
-@media (min-width:576px){
-    .billboard-bg{
-        position: fixed;
-    }
-    .yahoo-billboard-copy{
-        font-size:14px;
-    }    
-    .footer .home-icon{
-        height: 4vh;
-        margin-top:3rem;
-    }
-}
-@media (min-width:768px){
-    .yahoo-billboard{
-        width:100%;
-        left:3%;
-    }    
-    .billboard-right h1{
-        font-size:38px;
-        font-weight: 700;
-    }
-    .billboard-right p{
-        font-size:20px;
-        line-height:28px;
-        margin:0 0 3rem 0;
-    }
-}
-@media (min-width:992px){
-    .hide-md{
-        display:block;
-    }
-    .show-md{
-        display:none;
-    }
-    .billboard-left{
-        position: relative;
-        height:91vh;
-    }
-    .billboard-right{
-        height:auto;
-    }
-    .billboard-right .copy-container{
-        padding-left:3%;
-    }    
-    .billboard-right .copy-container .text-vertical{
-        padding-right:2rem;
-    }
-    .billboard-right h1{
-        font-size:36px;
-        font-weight: 700;
-        color:#fff;
-    }
-    .billboard-right p{
-        font-weight: 400;
-        font-size:18px;
-        line-height:22px;
-        margin:0 0 4rem 0;
-        color:#fff;
-    }    
-
-    .footer{
-        position: absolute;
-        bottom: 0;
-        background-color: #151218;
-        height: 10vh;
-        width:100vw;
-    }    
-
-    .footer .home-icon{
-        height: 6vh;
-        margin-top:2vh;
-        float:right;
-    }
+.hero-video{
+    padding-bottom: 35px;
 }
 
-@media (min-width:1200px){
-    .yahoo-billboard-copy{
-        font-size:16px;
-    }   
-    .billboard-right h1{
-        font-size:42px;
-        font-weight: 700;
-    }
-    .billboard-right p{
-        font-weight: 400;
-        font-size:22px;
-        line-height:26px;
-    }    
+/* Carousel Section */
+
+.oot .section-carousel{
+    text-align: center;
+    padding-bottom: 48px;
 }
 
-@media (min-width:1400px){
-    .billboard-right p{
-        font-size:24px;
-        line-height:28px;
-    }    
+@media (min-width: 768px){
+    .oot .section-carousel{
+        padding-bottom: 128px;
+    } 
+}
+
+.section-carousel .heading2{
+    color: #4a00a0;
+}
+
+/* Download Section */
+
+.oot .section-download{
+    background: url(./../images/gradient-full-bg.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+@media (min-width: 768px){
+    .oot .section-download{
+        padding-bottom: 128px;
+    }  
+}
+
+.section-download .heading2, .section-download .paragraph{
+    color: #fff;
+}
+
+.section-download .download-badge{
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    .section-download .download-badge{
+        width: 90%;
+    }
 }
