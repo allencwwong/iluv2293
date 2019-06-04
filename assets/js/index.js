@@ -26,7 +26,7 @@ $(".carousel").slick({
 
 // fetch Carousel Description from data/json
 var jsonURL =
-    "https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/js/randomThoughts-1.0.4.json";
+    "https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/js/carousel-slide-desc-1.0.0.json";
 
 function fetchCarouselDescription() {
     return fetch(jsonURL)
