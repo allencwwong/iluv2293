@@ -1,6 +1,6 @@
 const fs = require("fs"),
     uglifycss = require("uglifycss"),
-    AWSS3_URL = "https://s.yimg.com/cv/apiv2/default/yahoo/bb/assets",
+    AWSS3_URL = "https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets",
     ASSETS_PATH = "./assets/";
 
 // preprocess all the given CSS files
@@ -16,7 +16,7 @@ const uglified = uglifycss.processFiles(
 // inject the AWS S3 URL for all the assets
 const imagified = uglified.replace(/\.\.\/\.\.\/assets/g, AWSS3_URL);
 
-fs.writeFile("build/bundle-1.0.9.css", imagified, function(err) {
+fs.writeFile("build/bundle-1.0.0.css", imagified, function(err) {
     if (err) throw err;
     console.log("Successfully CSS uglified.");
 });
