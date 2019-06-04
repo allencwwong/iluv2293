@@ -1,18 +1,22 @@
 "use strict";
 
-var isMobile = $(window).width() > 568 ? true : false;
+var isMobile = $(window).width() > 568 ? false : true;
+
+console.log(isMobile);
 
 $(".carousel").slick({
-    mobileFirst: !isMobile,
+    // mobileFirst: isMobile,
     centerMode: true,
     slidesToShow: 5,
     arrows: true,
     prevArrow: ".arrow-prev",
     nextArrow: ".arrow-next",
+    slidesToScroll: 1,
     responsive: [
         {
             breakpoint: 768,
             settings: {
+                arrows: false,
                 centerMode: false,
                 slidesToShow: 1
             }
