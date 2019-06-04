@@ -27,9 +27,6 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
-a:active, .ott a:hover, .oot a:visited{
-    color: inherit;
-}
 
 .align-center{
     display: block;
@@ -196,7 +193,7 @@ header .header-cta a{
 
 /* Hero section */
 .oot .section-intro {
-    background: url(./../images/gradient-bg-1.0.0.png) no-repeat center center;
+    background: url(https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/images/gradient-bg-1.0.0.png) no-repeat center center;
     background-size: cover;
     margin-bottom: 32px;
 }
@@ -306,7 +303,7 @@ header .header-cta a{
 /* Download Section */
 
 .oot .section-download{
-    background: url(./../images/gradient-full-bg-1.0.0.png) no-repeat center center;
+    background: url(https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/images/gradient-full-bg-1.0.0.png) no-repeat center center;
     background-size: cover;
     text-align: center;
     padding-bottom: 48px;
@@ -331,3 +328,23 @@ header .header-cta a{
         width: 90%;
     }
 }
+
+/* footer */
+footer{
+    background-color: #1e0141;
+    height: 100px;
+    position: relative;
+    text-align: center;
+}
+footer .vertical-center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+}
+footer a{
+    color: #fff;
+}
+

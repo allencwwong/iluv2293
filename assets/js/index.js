@@ -1,7 +1,6 @@
 "use strict";
 
-let isMobile = $(window).width() > 568 ? true : false;
-console.log($(window).width());
+var isMobile = $(window).width() > 568 ? true : false;
 
 $(".carousel").slick({
     mobileFirst: !isMobile,
@@ -24,7 +23,7 @@ $(".carousel").slick({
     ]
 });
 
-// fetch Carousel Description from data/json
+// // fetch Carousel Description from data/json
 var jsonURL =
     "https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/js/carousel-slide-desc-1.0.0.json";
 
@@ -39,17 +38,15 @@ function fetchCarouselDescription() {
 }
 
 function getCarouselDescription(result) {
-    let currItem = $(".slick-slide.slick-current.slick-active img").data(
+    var currItem = $(".slick-slide.slick-current.slick-active img").data(
         "item"
     );
-    console.log(currItem);
     $(".carousel-panel").html(result.randomThoughts[currItem]);
 }
 
 function setArrowAlignment() {
-    console.log($(".slick-list").height());
     // slider height - arrow height / 2 to get margin top
-    let top = `${($(".slick-list").height() - 81) / 2}px`;
+    var top = ($(".slick-list").height() - 81) / 2 + "px";
     $(".arrow").css({ top: top });
 }
 
@@ -59,12 +56,10 @@ fetchCarouselDescription().then(function(result) {
     // onClick Arrow prev / next change copy
     $(".arrow").on("click", function() {
         // get next/prev onclick
-        console.log("clicked");
         getCarouselDescription(result);
     });
     // on swipe change copy
     $(".carousel").on("swipe", function() {
-        console.log("swiped");
         getCarouselDescription(result);
     });
 });

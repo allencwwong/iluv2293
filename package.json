@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "html-minifier": "^3.5.21",
-    "uglify-js": "^3.4.9",
+    "uglify-js": "^3.6.0",
     "uglifycss": "0.0.29"
   },
   "scripts": {
