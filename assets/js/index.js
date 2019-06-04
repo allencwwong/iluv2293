@@ -5,7 +5,6 @@ var isMobile = $(window).width() > 568 ? true : false;
 $(".carousel").slick({
     mobileFirst: !isMobile,
     centerMode: true,
-    centerPadding: "0px",
     slidesToShow: 5,
     arrows: true,
     prevArrow: ".arrow-prev",
@@ -14,9 +13,7 @@ $(".carousel").slick({
         {
             breakpoint: 768,
             settings: {
-                arrows: false,
                 centerMode: false,
-                centerPadding: "0px",
                 slidesToShow: 1
             }
         }
@@ -46,7 +43,8 @@ function getCarouselDescription(result) {
 
 function setArrowAlignment() {
     // slider height - arrow height / 2 to get margin top
-    var top = ($(".slick-list").height() - 81) / 2 + "px";
+    var top =
+        ($(".slick-list").height() - $(".arrow-prev").height()) / 2 + "px";
     $(".arrow").css({ top: top });
 }
 
@@ -60,6 +58,15 @@ fetchCarouselDescription().then(function(result) {
     });
     // on swipe change copy
     $(".carousel").on("swipe", function() {
+        getCarouselDescription(result);
+    });
+
+    // on click change slide
+    $(".slick-slide").on("click", function(e) {
+        e.preventDefault();
+        console.log("slide clicked");
+        var slideNo = $(this).data("slick-index");
+        $(".carousel").slick("slickGoTo", slideNo);
         getCarouselDescription(result);
     });
 });
