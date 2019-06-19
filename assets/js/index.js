@@ -26,7 +26,7 @@ $(".carousel").slick({
 
 // // fetch Carousel Description from data/json
 var jsonURL =
-    "https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/js/carousel-slide-desc-1.0.0.json";
+    "https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/js/carousel-slide-desc-1.0.8.json";
 
 function fetchCarouselDescription() {
     return fetch(jsonURL)
@@ -42,7 +42,12 @@ function getCarouselDescription(result) {
     var currItem = $(".slick-slide.slick-current.slick-active img").data(
         "item"
     );
-    $(".carousel-panel").html(result.randomThoughts[currItem]);
+    $(".carousel-panel").html(
+        "<h2>" +
+            result.carousel[currItem].t +
+            "</h2>" +
+            result.carousel[currItem].d
+    );
 }
 
 function setArrowAlignment() {
