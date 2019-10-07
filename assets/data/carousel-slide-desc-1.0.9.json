@@ -1,10 +1,10 @@
 {
     "carousel": [
-        {"t":"The Final Round","d":"Yahoo Finance's premier closing bell show covering the most important business news of the day, what’s driving the markets, and what to expect in the days and weeks ahead. Live at 3:00pm ET."},
-        {"t":"The Rush","d":"Every day, Yahoo Sports presents a fast-paced focus on the hottest topics in sports using a provocatively entertaining voice and a surge of unique visuals delights."},
         {"t":"BUILD Series","d":"BUILD is a live interview series like no other - a chance for fans to sit inches away from some of today's biggest names in entertainment, tech, fashion and business as they share the stories behind their projects and passions."},
         {"t":"The Bounce","d":"A live three-hour show five nights a week during the NBA regular season (expected to be Sunday, Monday, Wednesday, Friday and Saturday) that will deliver the top storylines and highlights from the NBA in real time."},
+        {"t":"The Final Round","d":"Yahoo Finance's premier closing bell show covering the most important business news of the day, what’s driving the markets, and what to expect in the days and weeks ahead. Live at 3:00pm ET."},
+        {"t":"The Rush","d":"Every day, Yahoo Sports presents a fast-paced focus on the hottest topics in sports using a provocatively entertaining voice and a surge of unique visuals delights."},
         {"t":"Poppin' Off!","d":"A fun, fast-paced interview series from Yahoo Sports where athletes and celebrities answer rapid fire questions while still trying to get the top score in the classic arcade game Pop-A-Shot."},
-        {"t":"Skullduggery Tv","d":"A focus on Washington scandals in the Trump era and their impact on today’s politics. Hosted by Yahoo News Chief Investigative Correspondent Michael Isikoff and Yahoo News Editor in Chief Daniel Klaidman."},
+        {"t":"Skullduggery Tv","d":"A focus on Washington scandals in the Trump era and their impact on today’s politics. Hosted by Yahoo News Chief Investigative Correspondent Michael Isikoff and Yahoo News Editor in Chief Daniel Klaidman."}
     ]
 }

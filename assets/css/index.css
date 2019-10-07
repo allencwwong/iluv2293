@@ -39,6 +39,7 @@ a{
     font-size: 40px;
     margin: 0;
     padding-bottom: 20px;
+    color: #10d3cb;
 }
 
 .heading2{
@@ -70,22 +71,43 @@ a{
     }
 }
 
+.il2293 header{
+    background: transparent;
+    height: 190px;
+    position: relative;
+    margin-bottom: 680px;
+    padding-top: 40px;
+}
 
-.oot .btn{
+.il2293 header::after{
+    background: #3b8df2;
+    bottom: -200px;
+    content: '';
+    display: block;
+    height: 5350px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-16deg);
+    transform-origin: 50% 100%;
+    z-index: -1;
+}
+
+.il2293 .btn{
     padding: 7px 5px;
     border-width:2px;
     border-style: solid;
     width: 128px;
     height: 32px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 35px;
     text-align: center;
     font-size: 13px;
 }
 
 .btn.btn-primary{
     border-color: #fff;
-    color: #fff;
+    color: #10d3cb;
 }
 
 .btn.btn-secondary{
@@ -98,15 +120,10 @@ a{
 }
 
 @media (min-width: 768px){
-    .oot .btn{
+    .il2293 .btn{
         padding: 14px 10px;
-        border-width:2px;
-        border-style: solid;
         width: 256px;
         height: 64px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        text-align: center;
         font-size: 26px;
     }
     .btn.btn-secondary{
@@ -130,7 +147,7 @@ a{
 
 
 /* Utility  */
-.oot .aspect-16-9 {
+.il2293 .aspect-16-9 {
     position: relative;
     background: #000;
     padding-top: 28.125%;
@@ -138,9 +155,9 @@ a{
     overflow: hidden;
     height: 0;
 }
-.oot .aspect-16-9 iframe,
-.oot .aspect-16-9 object,
-.oot .aspect-16-9 embed {
+.il2293 .aspect-16-9 iframe,
+.il2293 .aspect-16-9 object,
+.il2293 .aspect-16-9 embed {
     position: absolute;
     top: 0;
     left: 0;
@@ -195,24 +212,20 @@ header .header-cta a{
 }
 
 /* Hero section */
-.oot .section-intro {
+.il2293 .section-intro {
     background: url(https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/images/gradient-bg-1.0.0.png) no-repeat center center;
     background-size: cover;
     margin-bottom: 32px;
 }
 
 @media (min-width: 768px){
-    .oot .section-intro {
+    .il2293 .section-intro {
         margin-bottom: 64px;
     }  
 }
 
-.oot .section-hero{
+.il2293 .section-hero{
     text-align: center;
-}
-
-.section-hero .heading{
-    color: #fff;
 }
 
 .hero-video{
@@ -221,13 +234,13 @@ header .header-cta a{
 
 /* carousel content section */
 
-.oot .section-carousel-content{
+.il2293 .section-carousel-content{
     text-align: center;
     padding-bottom: 0px;
 }
 
 @media (min-width: 768px){
-    .oot .section-carousel-content{
+    .il2293 .section-carousel-content{
         padding-bottom: 2%;
     } 
 }
@@ -350,15 +363,19 @@ header .header-cta a{
 
 /* Download Section */
 
-.oot .section-download{
+.il2293 .section-download{
     background: url(https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/images/gradient-full-bg-1.0.0.png) no-repeat center center;
     background-size: cover;
     text-align: center;
     padding-bottom: 48px;
 }
 
+.il2293 .section-download .heading2{
+    color: #10d3cb;
+}
+
 @media (min-width: 768px){
-    .oot .section-download{
+    .il2293 .section-download{
         padding-bottom: 128px;
     }  
 }
@@ -384,6 +401,17 @@ header .header-cta a{
         height: 90%;
     }
 }
+
+/* form */
+.container-form{
+    background-color: #1e0141;
+    padding-top: 40px;
+}
+.section-form{
+    vertical-align: bottom;
+    border: 0;
+}
+
 
 /* footer */
 footer{
