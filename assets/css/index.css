@@ -1,134 +1,78 @@
 @font-face {
-    font-family: "Yahoo-Sans";
-    src: url("https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Regular.eot")
-            format("embedded-opentype"),
-        url("https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Regular.woff2") format("woff2"),
-        url("https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Regular.ttf") format("truetype");
+    font-family: 'Yahoo-Sans';
+    src: url('https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Regular.eot')
+            format('embedded-opentype'),
+        url('https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Regular.woff2')
+            format('woff2'),
+        url('https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Regular.ttf')
+            format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Yahoo-Sans";
-    src: url("https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Bold.eot")
-            format("embedded-opentype"),
-        url("https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Bold.woff") format("woff"),
-        url("https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Bold.ttf") format("truetype");
+    font-family: 'Yahoo-Sans';
+    src: url('https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Bold.eot')
+            format('embedded-opentype'),
+        url('https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Bold.woff')
+            format('woff'),
+        url('https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/fonts/Yahoo-Sans-Bold.ttf')
+            format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
-body, main{
+body,
+main {
     font-family: 'Yahoo-Sans', Arial, Helvetica, sans-serif;
     max-width: 100%;
     overflow-x: hidden;
 }
 
 /* Style  */
-a{
+a {
     text-decoration: none;
     cursor: pointer;
 }
 
-.align-center{
+.align-center {
     display: block;
     margin: 0 auto;
 }
 
-.heading{
+.heading {
     font-size: 40px;
     margin: 0;
     padding-bottom: 20px;
     color: #10d3cb;
 }
 
-.heading2{
+.heading2 {
     font-size: 36x;
     margin: 0;
     padding: 40px 0 10px 0;
 }
 
-.paragraph{
+.paragraph {
     font-size: 18px;
     line-height: 26px;
     padding-bottom: 25px;
 }
 
-@media (min-width: 768px){
-    .heading{
+@media (min-width: 768px) {
+    .heading {
         font-size: 75px;
         padding-bottom: 25px;
     }
-    
-    .heading2{
+
+    .heading2 {
         font-size: 55px;
         padding: 60px 0 20px 0;
-    }  
-    .paragraph{
+    }
+    .paragraph {
         font-size: 24px;
         line-height: 36px;
         padding-bottom: 45px;
-    }
-}
-
-.il2293 header{
-    background: transparent;
-    height: 190px;
-    position: relative;
-    margin-bottom: 680px;
-    padding-top: 40px;
-}
-
-.il2293 header::after{
-    background: #3b8df2;
-    bottom: -200px;
-    content: '';
-    display: block;
-    height: 5350px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: skewY(-16deg);
-    transform-origin: 50% 100%;
-    z-index: -1;
-}
-
-.il2293 .btn{
-    padding: 7px 5px;
-    border-width:2px;
-    border-style: solid;
-    width: 128px;
-    height: 32px;
-    box-sizing: border-box;
-    border-radius: 35px;
-    text-align: center;
-    font-size: 13px;
-}
-
-.btn.btn-primary{
-    border-color: #fff;
-    color: #10d3cb;
-}
-
-.btn.btn-secondary{
-    padding-top: 10px;
-    border-color: #999;
-    color: #1679cc;
-    width: 180px;
-    height: 48px;
-    font-size: 22px;
-}
-
-@media (min-width: 768px){
-    .il2293 .btn{
-        padding: 14px 10px;
-        width: 256px;
-        height: 64px;
-        font-size: 26px;
-    }
-    .btn.btn-secondary{
-        width: 256px;
-        height: 64px;
     }
 }
 
@@ -140,11 +84,10 @@ a{
 }
 
 .no-gutters > .col,
-.no-gutters > [class*="col-"] {
-  padding-right: 0;
-  padding-left: 0;
+.no-gutters > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
 }
-
 
 /* Utility  */
 .il2293 .aspect-16-9 {
@@ -165,263 +108,126 @@ a{
     height: 100%;
 }
 
-.mobile{
+.mobile {
     display: block;
 }
-.desktop{
+.desktop {
     display: none;
 }
 
-@media (min-width: 768px){
-    .mobile{
+@media (min-width: 768px) {
+    .mobile {
         display: none;
     }
-    .desktop{
+    .desktop {
         display: block;
     }
 }
 
-/* Header */
-header{
-    height: 146px;
-    padding-top: 45px;
-    margin-bottom: 40px;
+.il2293 .nav-container {
+    background: #3b8df2;
 }
 
-header .logo{
-    width: 150px;
-    height: auto;
-}
-
-@media (min-width: 768px){
-    header .logo{
-        width: 460px;
-        margin-left: -40px;
-        margin-top: 15px;
-    }
-}
-
-header .header-cta a{
-    float: right;
-}
-
-@media (min-width: 768px){
-    header .header-cta a{
-        margin-right: -30px;
-    }
-}
-
-/* Hero section */
-.il2293 .section-intro {
-    background: url(https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/images/gradient-bg-1.0.0.png) no-repeat center center;
-    background-size: cover;
-    margin-bottom: 32px;
-}
-
-@media (min-width: 768px){
-    .il2293 .section-intro {
-        margin-bottom: 64px;
-    }  
-}
-
-.il2293 .section-hero{
-    text-align: center;
-}
-
-.hero-video{
-    padding-bottom: 35px;
-}
-
-/* carousel content section */
-
-.il2293 .section-carousel-content{
-    text-align: center;
-    padding-bottom: 0px;
-}
-
-@media (min-width: 768px){
-    .il2293 .section-carousel-content{
-        padding-bottom: 2%;
-    } 
-}
-
-.section-carousel-content .heading2{
-    color: #4a00a0;
-}
-
-/* carousel section */
-/* .slick-slider{
-    overflow-x: hidden;
-} */
-
-@media (min-width: 768px){
-    .slick-slider{
-        overflow: visible;
-    }
-}
-
-.section-carousel{
-    position: relative;
-}
-
-.section-carousel .arrow{
-    position: absolute;
-    display: none;
-    z-index: 99;
-    margin: 0;
-    display: inline-block;
-}
-
-.section-carousel .arrow img{
-    width: 50%;
-    height: auto;
-}
-
-@media (min-width: 992px){
-    .section-carousel .arrow img{
-        width: 80%;
-    }
-}
-
-.section-carousel .arrow-prev{
-    left: 10px;
-    opacity: 0.8;
-}
-
-.section-carousel .arrow-next{
-    right: 10px;
-    opacity: 0.8;
-}
-
-@media (mind-width: 768px){
-    .section-carousel .arrow-prev{
-        left: 20px;
-    }
-    
-    .section-carousel .arrow-next{
-        right: 20px;
-    }
-}
-
-.section-carousel .arrow-next img{
-    float: right;
-}
-
-.slick-list{
-    overflow: unset !important;
-}
-
-.slick-slide img{
-    width: 100%;
-    height: 100%;
-    transition: width 0.5s, height 0.5s, margin 0.5s;
-    margin-top: 0;
-    margin-left: 0;
-}
-
-@media (min-width: 768px){
-    .slick-slide img{
-        width: 120%;
-        height: 120%;
-    }    
-}
-
-.slick-slide.slick-current.slick-active.slick-center img{
-    width: 100%;
-}
-
-@media (min-width: 768px){
-    .slick-slide.slick-current.slick-active.slick-center img{
-        position: absolute;
-        height: 140%;
-        width: auto;
-        margin-top: -0.8%;
-        margin-left: -1.6%;
-    }  
-}
-
-/* carousel panel */
-
-.carousel-panel{
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    height: 120px;
-    margin: 10% auto 144px auto;
-    color: #929292;
-}
-
-.carousel-panel h2{
-    color: #000;
-}
-
-@media (min-width: 768px){
-    .carousel-panel{
-        margin: 7% auto 128px auto;
-    }
-}
-
-/* Download Section */
-
-.il2293 .section-download{
-    background: url(https://s.yimg.com/cv/apiv2/default/yahoo/oot/assets/images/gradient-full-bg-1.0.0.png) no-repeat center center;
-    background-size: cover;
-    text-align: center;
-    padding-bottom: 48px;
-}
-
-.il2293 .section-download .heading2{
-    color: #10d3cb;
-}
-
-@media (min-width: 768px){
-    .il2293 .section-download{
-        padding-bottom: 128px;
-    }  
-}
-
-.section-download .heading2, .section-download .paragraph{
+.il2293 .nav-container nav a {
     color: #fff;
 }
 
-.section-download .download-badge{
-    width: 100%;
-    transition: transform 0.8s,box-shadow 0.8s;
+.il2293 .nav-container nav a.nav-logo {
+    font-weight: 600;
+    font-size: 28px;
+}
+.il2293 .nav-container nav a.nav-logo img {
+    max-height: 30px;
+    height: 100%;
 }
 
-.section-download .badge-apple-tv:hover,
-.section-download .badge-apple-store:hover,
-.section-download .badge-play-store:hover{
-    transform: translateZ(0) scale(1.07);
-    box-shadow: 2px 2px 10px rgba(0,0,0,.35);
+.il2293 header {
+    background: transparent;
+    height: 190px;
+    position: relative;
+    margin-bottom: 480px;
+    padding-top: 40px;
 }
 
-@media (min-width: 768px){
-    .section-download .download-badge{
-        height: 90%;
+.il2293 header::after {
+    background: #3b8df2;
+    bottom: -200px;
+    content: '';
+    display: block;
+    height: 5350px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-16deg);
+    transform-origin: 50% 100%;
+    z-index: -1;
+}
+
+.il2293 .card-hunt {
+    transition: 0.5s;
+}
+
+.il2293 .card-hunt:hover {
+    /* box-shadow: 1px 2px 8px 2px #333; */
+    transform: scale(1.05);
+}
+
+.il2293 .testimonials {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .il2293 .testimonials {
+        padding-left: 60px;
+        padding-right: 60px;
     }
 }
 
-/* form */
-.container-form{
-    background-color: #1e0141;
-    padding-top: 40px;
-}
-.section-form{
-    vertical-align: bottom;
-    border: 0;
+.il2293 .testimonial {
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+    width: 243px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 14px;
 }
 
+.il2293 .testimonials .testimonial .stars {
+    color: #f9a801;
+    margin: 5px 0;
+}
+
+.il2293 .testimonials .testimonial .byline {
+    color: #999;
+    font-size: 0.89em;
+}
+
+.il2293 .testimonials .testimonial:hover,
+.il2293 .testimonials .testimonial:hover .stars,
+.il2293 .testimonials .testimonial:hover .byline {
+    background: #3b8df2;
+    color: #fff;
+}
+
+.il2293 #faq {
+    width: 100%;
+}
 
 /* footer */
-footer{
+footer {
     background-color: #1e0141;
     height: 100px;
     position: relative;
     text-align: center;
     color: #fff;
 }
-footer .vertical-center{
+footer .vertical-center {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -429,7 +235,6 @@ footer .vertical-center{
     transform: translateY(-50%);
     width: 100%;
 }
-footer a{
+footer a {
     color: #fff;
 }
-
