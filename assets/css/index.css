@@ -48,15 +48,25 @@ a {
 }
 
 .heading2 {
-    font-size: 36x;
+    font-size: 32x;
     margin: 0;
     padding: 40px 0 10px 0;
+}
+
+.heading5{
+    font-weight: 600;
+    padding-bottom: 20px;
 }
 
 .paragraph {
     font-size: 18px;
     line-height: 26px;
     padding-bottom: 25px;
+}
+
+p.copy-lg{
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 @media (min-width: 768px) {
@@ -66,7 +76,6 @@ a {
     }
 
     .heading2 {
-        font-size: 55px;
         padding: 60px 0 20px 0;
     }
     .paragraph {
@@ -115,6 +124,44 @@ a {
     display: none;
 }
 
+/* general */
+
+.btn.btn-pill{
+    max-width: 120px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2px 16px;
+    border: 1px solid;
+    font-size: 16px;
+}
+
+.btn.btn-pill-primary{
+    border-color: #3b8df2;
+    color: #3b8df2
+}
+
+.btn.btn-pill-secondary{
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn.btn-pill-primary:hover{
+    color: #fff;
+    border-color: #3b8df2;
+    background: #3b8df2;
+}
+
+.btn.btn-pill-secondary:hover{
+    color: #fff;
+    border-color: #f9a801;
+    background: #f9a801;
+}
+
+.btn.btn-pill-bold{
+    border-width: 2px;
+}
+
 @media (min-width: 768px) {
     .mobile {
         display: none;
@@ -143,10 +190,11 @@ a {
 
 .il2293 header {
     background: transparent;
-    height: 190px;
+    height: 270px;
     position: relative;
-    margin-bottom: 480px;
-    padding-top: 40px;
+    margin-bottom: 330px;
+    padding-top: 70px;
+    color: #fff;
 }
 
 .il2293 header::after {
@@ -163,18 +211,48 @@ a {
     z-index: -1;
 }
 
+.il2293 header .card.card-game{
+    border-width: 2px;
+    background: transparent;
+    width: 90%;
+    height: 150px;
+    border-color: #fff;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.il2293 header .card.card-game:hover{
+    border-color: #f9a801;
+    color: #f9a801;
+}
+
+.il2293 header .card.card-game:hover .btn.btn-pill{
+    color: #fff;
+    border-color: #f9a801;
+    background: #f9a801;
+}
+
+.il2293 header .card.card-game .icon-container{
+    height: 70px;
+}
+
 .il2293 .card-hunt {
     transition: 0.5s;
 }
 
 .il2293 .card-hunt:hover {
     /* box-shadow: 1px 2px 8px 2px #333; */
-    transform: scale(1.05);
+    border-color: #3b8df2;
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 .il2293 .testimonials {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -215,13 +293,21 @@ a {
     color: #fff;
 }
 
+.il2293 .hiw{
+    margin-bottom: 40px;
+}
+
+.il2293 .faq{
+    margin-bottom: 40px;
+}
+
 .il2293 #faq {
     width: 100%;
 }
 
 /* footer */
 footer {
-    background-color: #1e0141;
+    background-color: #3b8df2;
     height: 100px;
     position: relative;
     text-align: center;
