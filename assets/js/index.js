@@ -15,7 +15,9 @@ var il2293 = (function(){
     
         function pageLoader(page){
             page = page + '.html';
-            $('main').html('').load(page);
+            $('main').html('').load(page,function(){
+                alert(location.search.substr(1))
+            });
         }
     
         return {
