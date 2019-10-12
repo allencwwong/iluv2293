@@ -1,7 +1,8 @@
 
 var il2293 = (function(){
         var init = function(){
-            $('.card.card-game').on('click',function(){
+            $('.card.card-game').on('click',function(e){
+                e.preventDefault();
                 pageLoader('detail');
             })
             $('.card.card-hunt a').on('click', function () {
@@ -25,5 +26,4 @@ var il2293 = (function(){
         }
 })();
 
-console.log(il2293)
 il2293.init();
