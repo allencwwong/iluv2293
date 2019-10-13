@@ -27,6 +27,7 @@ main {
     font-family: 'Yahoo-Sans', Arial, Helvetica, sans-serif;
     max-width: 100%;
     overflow-x: hidden;
+    width: 100vw;
 }
 
 /* Style  */
@@ -124,6 +125,14 @@ p.copy-lg{
     display: none;
 }
 
+.hide{
+    display: none;
+}
+
+.show{
+    display: inline-block;
+}
+
 /* general */
 
 .btn.btn-pill{
@@ -196,10 +205,10 @@ p.copy-lg{
 
 .il2293 header {
     background: transparent;
-    height: 270px;
+    height: 680px;
     position: relative;
-    margin-bottom: 330px;
-    padding-top: 70px;
+    margin-bottom: 230px;
+    padding-top: 30px;
     color: #fff;
 }
 
@@ -217,17 +226,48 @@ p.copy-lg{
     z-index: -1;
 }
 
+.il2293 header img{
+    max-width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 576px){
+    .il2293 header{
+        height: 500px;
+        margin-bottom: 330px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .il2293 header{
+        height: 270px;
+        padding-top: 70px;
+    }
+    .il2293 header img{
+        max-width: 100%;
+    }
+}
+
 .il2293 header .card.card-game{
     border-width: 2px;
     background: transparent;
-    width: 90%;
-    height: 150px;
+    width: 100%;
+    max-height: 170px;
     border-color: #fff;
     text-align: center;
     color: #fff;
     font-size: 14px;
     transition: 0.5s;
     cursor: pointer;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px){
+    .il2293 header .card.card-game{
+        width: 90%;
+    }
 }
 
 .il2293 header .card.card-game:hover{
@@ -247,6 +287,7 @@ p.copy-lg{
 
 .il2293 .card-hunt {
     transition: 0.5s;
+    margin-bottom: 20px;
 }
 
 .il2293 .card-hunt:hover {
@@ -344,16 +385,23 @@ footer a {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 576px){
+    .il2293-info .hero .heading1{
+        margin-top: 100px;
+    }
 }
 
 .il2293-info .hero .description{
     color: #fff;
-    width: 500px;
+    max-width: 500px;
     text-align: left;
     display: block;
     margin: 0 auto;
     padding: auto 20px;
+    width: 100%;
 }
 
 .il2293-info .hero-bg{
