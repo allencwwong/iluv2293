@@ -62,7 +62,7 @@
         <!--load all styles -->
     </head>
 
-    <body class="il2293">
+    <body class="il2293 il2293-info">
         <div class="container-fluid nav-container">
             <div class="container">
                 <nav class="nav">
@@ -81,15 +81,16 @@
         </div>
         <main>
             <section class="hero">
-                <div class="container-fluid">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <h1 class="heading1"></h1>
-                                <p class="description"></p>
+                <div class="hero-bg"></div>
+                    <div class="container-fluid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h1 class="heading1"></h1>
+                                    <p class="description"></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </section>
 
@@ -99,16 +100,57 @@
                         <div class="col-12 col-sm-6">
                             <h2 class="heading2">How to play?</h2>
                             <p class="description"></p>
+                            <h3>Try a clue</h3>
+                            <p>clue1 <a href="#">answer</a></p>
+                            <p class="hide">hide</p>
+                            <h2 class="heading2">Preview fun times</h2>
+                            <div id="look-around" class="row">
+                                <div class="col-3">
+                                    <img class="img-fluid" data-id="1" src="https://via.placeholder.com/480" data-toggle="modal" data-target="#exampleModal" />
+                                </div>
+                                <div class="col-3">
+                                    <img class="img-fluid" data-id="2" src="https://via.placeholder.com/480" data-toggle="modal" data-target="#exampleModal" />
+                                </div>
+                                <div class="col-3">
+                                    <img class="img-fluid" data-id="3" src="https://via.placeholder.com/480" data-toggle="modal" data-target="#exampleModal" />
+                                </div>
+                                <div class="col-3">
+                                    <img class="img-fluid" data-id="4" src="https://via.placeholder.com/480" data-toggle="modal" data-target="#exampleModal" />
+                                </div>
+                            </div>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <h3 class="heading1">Difficulty: <span class="difficulty"></span></h3>
-                            <div class="difficulty-icon"></div>
-                            <div class="player"></div>
-                            <div class="age">10+ under 10 require wavier</div>
-                            <div class="game-dur"></div>
-                            <div class="age"></div>
-                            <div>
-                                <a href="/pages/book/detail.html?id=1" class="btn btn-pill btn-pill-primary card-link cta-book-1" data-cta-book="1">Book Now</a>
+                            <h2 class="heading2">Difficulty: <span class="difficulty"></span></h2>
+                            <div class="difficulty-icon">
+                                <i class="fal fa-lock-alt"></i>
+                                <i class="fal fa-lock-alt"></i>
+                                <i class="fal fa-lock-alt"></i>
+                                <i class="fal fa-lock-alt"></i>
+                                <i class="fal fa-lock-alt"></i>
+                            </div>
+                            <div class="specs">
+                                <div class="container">
+                                    <i class="fal fa-user"></i>
+                                    <span class="player"></span>
+                                </div>
+                                <div class="container">
+                                    <i class="fal fa-users"></i>
+                                    <span class="team"></span>
+                                </div>
+                                <div class="age container">
+                                    <i class="fal fa-users-medical"></i>
+                                    10+ under 10 require wavier</div>
+                                <div class="container">
+                                    <i class="fal fa-stopwatch"></i>
+                                    <span class="game-dur"></span>
+                                </div>
+                                <div class="container">
+                                    <i class="fal fa-location-circle"></i>
+                                    <span class="location"></span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <a href="" class="btn btn-pill btn-pill-primary btn-pill-lg card-link cta-book-1" data-cta-book="1">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -131,6 +173,17 @@
                 >
             </div>
         </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="img-fluid" src="" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
