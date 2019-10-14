@@ -1397,36 +1397,53 @@
                         <input type="text" class="form-control" id="inputZip">
                         </div>
                     </div>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="teamsize">Team Size</label>
+                            <select id="teamsize" class="form-control">
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="5">6</option>
+                                <option value="5">7</option>
+                                <option value="5">8</option>
+                                <option value="5">9</option>
+                                <option value="5">10</option>
+                                <option value="5">11</option>
+                                <option value="5">12</option>
+                                <option value="5">13</option>
+                                <option value="5">14</option>
+                                <option value="5">15</option>
+                                <option value="5">16</option>
+                                <option value="5">17</option>
+                                <option value="5">18</option>
+                                <option value="5">19</option>
+                                <option value="5">20</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="teamamount">Number of Teams</label>
+                            <select id="teamamount" class="form-control">
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3">4</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="form-group">
-                        <label for="teamsize">Team Size</label>
-                        <select id="teamsize" class="form-control">
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="5">6</option>
-                            <option value="5">7</option>
-                            <option value="5">8</option>
-                            <option value="5">9</option>
-                            <option value="5">10</option>
-                            <option value="5">11</option>
-                            <option value="5">12</option>
-                            <option value="5">13</option>
-                            <option value="5">14</option>
-                            <option value="5">15</option>
-                            <option value="5">16</option>
-                            <option value="5">17</option>
-                            <option value="5">18</option>
-                            <option value="5">19</option>
-                            <option value="5">20</option>
-                        </select>
+                            <label for="paymentmethod">Payment Method</label>
+                            <select id="paymentmethod" class="form-control">
+                                <option value="2">Credit Card</option>
+                                <option value="3">By Call</option>
+                            </select>
                     </div>
                     </form>
             </div>
             <div class="modal-footer">
                 <div class="col-7">
                     <h4>
-                        Total: $<span></span>
+                        Total: $<span class="total-due"></span>
                     </h4>
                 </div>
                 <div class="col-5">
@@ -1469,6 +1486,20 @@
             $('.carousel').carousel({
                 interval: 0
             });
+
+            $('#teamsize').on('change',function(){
+                var teamSize = $('#teamsize').find(":selected").text(),
+                    total = parseInt(teamSize) * 50;
+                $('.total-due').text(total);
+            })
+
+            calcTotal();
+
+            function calcTotal(){
+                var teamSize = $('#teamsize').find(":selected").text(),
+                    total = parseInt(teamSize) * 50;
+                $('.total-due').text(total);
+            }
         </script>
     </body>
 </html>
