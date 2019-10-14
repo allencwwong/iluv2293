@@ -7,12 +7,13 @@ var content = {
             desc: 'City Hunt most popular event creations is a fun and interactive treasure hunt in the WHOLE city! Exploring interesting bits of history and culture from Chinatown , North beach to Downtown Market.'
         },
         content: {
-            desc: 'how 2 play?',
+            desc: '<h4>Background</h4><p>City Hunt SF classic scavenger hunt will take you on a journey to explore the city like never before. Prepare to take goofy selfie, hidden landmarks, visit speciality restaurants, and much much more!</p><h4>Overview</h4><p>2 - 4 Teams will compete against time and each others to solve as many clues as possible. </p><p>Starting location will be the same but you can solve clues in any order you want</p><h4>Rules</h4><p> Must be at the final check point before time runs out</p><p>Feel free to use any devices for help but most clues does not require any extra research</p>',
             difficulty: '2',
             player: 'For 4 - 10 Players',
             team: 'Form 2 - 3 Teams',
             gameDur: 'Game duration: approx 120 - 160 mins',
-            location: 'Popular city locations'
+            location: 'Popular city locations',
+            clue: 'I am so hot I am able to attain many beauties under my roof. <br><span class="hint">A location inside golden gate [Ref: <a href="https://goldengatepark.com/wp-content/uploads/2011/03/map_of_golden_gate_park.pdf" target="_blank">Golden Gate Park Map</a>]</span><br>'
         },
         cta: '/pages/book/detail.html',
         imgs: {
@@ -25,16 +26,17 @@ var content = {
     "2": {
         hero: {
             url: 'bgh-bg.jpg',
-            heading: 'big game hunt',
-            desc: 'City Hunt most popular event creations is a fun and interactive treasure hunt in the WHOLE city! Exploring interesting bits of history and culture from Chinatown , North beach to Downtown Market.'
+            heading: 'Mission Impossible',
+            desc: 'Agent. Your mission should you choose to accept it involve obtaining items, taking selfie and having a good time. You may select up to 4 team members. You have 3 hrs to solve as many clues as possible. As always, should any member of your team be lost or brain fried, the Secretary will disavow all knowledge of your actions.'
         },
         content: {
-            desc: 'how 2 play?',
+            desc: '<h4>Background</h4><p>Agents we believe a few department have defected. It up to your team to gather all the clues and items to pin point which team are traitorous</p><h4>Overview</h4><p>2 - 4 Teams will compete against time and each others to solve as many clues as possible. </p><p>Starting location will be the same but you can solve clues in any order you want</p><h4>Rules</h4><p> Must be at the final check point before time runs out</p><p>Feel free to use any devices for help but most clues does not require any extra research</p>',
             difficulty: '3',
             player: 'For 4 - 12 Players',
             team: 'Form 2 - 4 Teams',
             gameDur: 'Game duration: approx 160 - 180 mins',
-            location: 'SF city wide'
+            location: 'SF city wide',
+            clue: 'I am so hot I am able to attain many beauties under my roof. <br><span class="hint">A location inside golden gate [Ref: <a href="https://goldengatepark.com/wp-content/uploads/2011/03/map_of_golden_gate_park.pdf" target="_blank">Golden Gate Park Map</a>]</span><br>'
         },
         cta: '/pages/book/detail.html',
         imgs: {
@@ -51,13 +53,13 @@ var content = {
             desc: 'City Hunt most popular event creations is a fun and interactive treasure hunt in the WHOLE city! Exploring interesting bits of history and culture from Chinatown , North beach to Downtown Market.'
         },
         content: {
-            desc: '<h4>Background</h4><p>Multiple sources have confirm the Pink Panther has been stolen and hidden somewhere in the Golden Gate Park. The first team to retrieve Pink Panther will win the Leigon of Honur and the title Champion of the Hunt!</p><h4>Overview</h4><p>3 - 4 Teams will compete against time and each others to locate the treasure. Teams have to be selected and confirm within 24 hours after booking. </p><p>Each team will have a different starting location with different clues. After half way point clues will merge and be the same for all teams.</p> <p>Starting location will be determine by a pre-hunt exercise!</p><h4>Rules</h4><p> Locate the treasure within 160 mins</p><p>Hints are available every 20mins if check point not achieved</p><p>Feel free to use any devices for help but most clues does not require any extra research</p>',
+            desc: '<h4>Background</h4><p>Multiple sources have confirm the Pink Panther has been stolen and hidden somewhere in the Golden Gate Park. The first team to retrieve Pink Panther will win the Leigon of Honur and the title Champion of the Hunt!</p><h4>Overview</h4><p>3 - 4 Teams will compete against time and each others to locate the treasure. Teams have to be selected and confirm within 24 hours after booking. </p><p>Each team will have a different starting location with different clues. After half way point clues will merge and be the same for all teams.</p> <p>Starting location will be determine by a pre-hunt exercise!</p><h4>Rules</h4><p> Locate the treasure within 90 mins</p><p>Hints are available every 20mins if check point not achieved</p><p>Feel free to use any devices for help but most clues does not require any extra research</p>',
             difficulty: '4',
             player: 'For 6 - 20 Players',
             team: 'Form 3 - 4 Teams',
-            gameDur: 'Game duration: 160 mins',
+            gameDur: 'Game duration: 90 mins',
             location: 'SF Golden Gate Park',
-            clue: 'I am so hot I am able to attain many beauties under my roof. <br>A location inside golden gate [Ref: <a href="https://goldengatepark.com/wp-content/uploads/2011/03/map_of_golden_gate_park.pdf" target="_blank">Golden Gate Park Map</a>]<br>'
+            clue: 'I am so hot I am able to attain many beauties under my roof. <br><span class="hint">A location inside golden gate [Ref: <a href="https://goldengatepark.com/wp-content/uploads/2011/03/map_of_golden_gate_park.pdf" target="_blank">Golden Gate Park Map</a>]</span><br>'
         },
         cta: '/pages/book/detailcomp.html',
         imgs: {

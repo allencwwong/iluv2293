@@ -447,6 +447,14 @@ footer a {
     margin-bottom: 10px;
 }
 
+.il2293-info .hint{
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+/* booking page */
+
 .il2293-book .carousel{
     margin-top: 50px;
 }
