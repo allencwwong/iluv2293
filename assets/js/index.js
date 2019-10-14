@@ -50,7 +50,7 @@ var content = {
         hero: {
             url: 'both-bg.png',
             heading: 'Pink Panther',
-            desc: 'City Hunt most popular event creations is a fun and interactive treasure hunt in the WHOLE city! Exploring interesting bits of history and culture from Chinatown , North beach to Downtown Market.'
+            desc: 'Inspectors if you are up for the task master theif has strike again and it up to you to locate the missing Pink Panther.'
         },
         content: {
             desc: '<h4>Background</h4><p>Multiple sources have confirm the Pink Panther has been stolen and hidden somewhere in the Golden Gate Park. The first team to retrieve Pink Panther will win the Leigon of Honur and the title Champion of the Hunt!</p><h4>Overview</h4><p>3 - 4 Teams will compete against time and each others to locate the treasure. Teams have to be selected and confirm within 24 hours after booking. </p><p>Each team will have a different starting location with different clues. After half way point clues will merge and be the same for all teams.</p> <p>Starting location will be determine by a pre-hunt exercise!</p><h4>Rules</h4><p> Locate the treasure within 90 mins</p><p>Hints are available every 20mins if check point not achieved</p><p>Feel free to use any devices for help but most clues does not require any extra research</p>',
