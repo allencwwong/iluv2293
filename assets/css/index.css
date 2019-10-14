@@ -215,7 +215,14 @@ p.copy-lg{
 }
 
 .il2293 nav .nav-text{
-    padding-top: 18px;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 568px){
+    .il2293 nav .nav-text{
+        padding-top: 18px;
+        font-size: 16px;
+    }
 }
 
 .il2293 header {
@@ -475,10 +482,20 @@ footer a {
     margin-bottom: 30px;
 }
 
+.il2293-book .day-of-week .col-1{
+    overflow: hidden;
+}
+
 .il2293-book .day-of-week .date{
     font-weight: 400;
-    font-size: 14px;
+    font-size: 7px;
     color: #333;
+}
+
+@media screen and (min-width: 568px){
+    .il2293-book .day-of-week .date{
+        font-size: 14px;
+    }
 }
 
 .il2293-book .time-slot{
@@ -498,6 +515,14 @@ footer a {
 .il2293-book .time-avail.time-avail-ua{
     color: #aaa;
     font-style: italic;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 568px){
+    .il2293-book .time-avail.time-avail-ua{
+        font-size: 12px;
+    }
 }
 
 .il2293-book .time-avail .time-avail-book{
@@ -508,6 +533,13 @@ footer a {
     display: block;
     margin: 0 auto;
     cursor: pointer;
+    font-size: 10px;
+}
+
+@media screen and (min-width: 568px){
+    .il2293-book .time-avail .time-avail-book{
+        font-size: 12px;
+    }
 }
 
 .il2293-book .time-avail .time-avail-book:hover{
