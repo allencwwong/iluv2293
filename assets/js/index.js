@@ -68,8 +68,12 @@ var content = {
         }
     }
 }
-var il2293 = (function(){
+var Il2293 = (function(){
         var init = function(){
+
+            animateScroll('.faq-link','.faq');
+            animateScroll('.hiw-link', '.hiw');
+
             var pathParam = location.search.substr(1);
             if (pathParam.length > 0){
                 if (~location.href.indexOf('info/')){
@@ -106,16 +110,28 @@ var il2293 = (function(){
                         $('.ans').css('display','inline-block');
                         $('.ans').text('Conservatory of Flowers')
                     })
-
+                
+                // booking js
                 }else{
                     console.log(location.search.substr(4))
                 }
             }
         }
+
+        // helper
+        var animateScroll = function(triggerEl,destEl){
+            $(triggerEl).click(function () {
+                $('html,body').animate({
+                    scrollTop: $(destEl).offset().top
+                },
+                    300);
+            });
+        }
+
     
         return {
             init: init,
         }
 })();
 
-il2293.init();
+Il2293.init();
