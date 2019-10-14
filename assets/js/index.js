@@ -14,7 +14,7 @@ var content = {
             gameDur: 'Game duration: approx 120 - 160 mins',
             location: 'Popular city locations'
         },
-        cta: '/pages/book/detail.html?id=1',
+        cta: '/pages/book/detail.html',
         imgs: {
             "1": 'https://n8u3n2g6.stackpathcdn.com/wp-content/uploads/segway-scavenger-hunt-san-francisco-aqurium-of-the-bay-fishermans-wharf-600-400.jpg',
             "2": 'https://s3-media1.fl.yelpcdn.com/bphoto/Np1DToJ0PMeUWfDpG4sU5A/o.jpg',
@@ -36,7 +36,7 @@ var content = {
             gameDur: 'Game duration: approx 160 - 180 mins',
             location: 'SF city wide'
         },
-        cta: '/pages/book/detail.html?id=2',
+        cta: '/pages/book/detail.html',
         imgs: {
             "1": 'https://s3-media4.fl.yelpcdn.com/bphoto/PqSjasT4o5xUix3iYs7LRg/o.jpg',
             "2": 'https://s3-media2.fl.yelpcdn.com/bphoto/XRc-1j93I6SRkx4k8PYWhg/o.jpg',
@@ -51,7 +51,7 @@ var content = {
             desc: 'City Hunt most popular event creations is a fun and interactive treasure hunt in the WHOLE city! Exploring interesting bits of history and culture from Chinatown , North beach to Downtown Market.'
         },
         content: {
-            desc: '<h4>Background</h4><p>Multiple sources have confirm the Pink Panther has been stolen and hidden somewhere in the Golden Gate Park. The first team to retrieve Pink Panther will win the Leigon of Honur and the title Champion of the Hunt!</p><h4>Overview</h4><p>3 - 4 Teams will compete against time and each others to locate the treasure. Teams have to be selected and confirm within 24 hours after booking. Starting location will be determine by a pre-hunt exercise!</p><h4>Rules</h4><p> Locate the treasure within 160 mins</p><p>Hints are available every 20mins if check point not achieved</p><p>Feel free to use any devices for help but most clues does not require any extra research</p>',
+            desc: '<h4>Background</h4><p>Multiple sources have confirm the Pink Panther has been stolen and hidden somewhere in the Golden Gate Park. The first team to retrieve Pink Panther will win the Leigon of Honur and the title Champion of the Hunt!</p><h4>Overview</h4><p>3 - 4 Teams will compete against time and each others to locate the treasure. Teams have to be selected and confirm within 24 hours after booking. </p><p>Each team will have a different starting location with different clues. After half way point clues will merge and be the same for all teams.</p> <p>Starting location will be determine by a pre-hunt exercise!</p><h4>Rules</h4><p> Locate the treasure within 160 mins</p><p>Hints are available every 20mins if check point not achieved</p><p>Feel free to use any devices for help but most clues does not require any extra research</p>',
             difficulty: '4',
             player: 'For 6 - 20 Players',
             team: 'Form 3 - 4 Teams',
@@ -59,7 +59,7 @@ var content = {
             location: 'SF Golden Gate Park',
             clue: 'I am so hot I am able to attain many beauties under my roof. <br>A location inside golden gate [Ref: <a href="https://goldengatepark.com/wp-content/uploads/2011/03/map_of_golden_gate_park.pdf" target="_blank">Golden Gate Park Map</a>]<br>'
         },
-        cta: '/pages/book/detail.html?id=3',
+        cta: '/pages/book/detailcomp.html',
         imgs: {
             "1": 'https://hoodscope.files.wordpress.com/2009/04/sloshball_6.jpg?w=584',
             "2": 'https://www.parksconservancy.org/sites/default/files/styles/basic/public/CRFI_160112_APAZ_0808_2x1.jpg?itok=N94jJn9V',
@@ -73,6 +73,7 @@ var Il2293 = (function(){
 
             animateScroll('.faq-link','.faq');
             animateScroll('.hiw-link', '.hiw');
+            animateScroll('.hunt-link', '.hunts');
 
             var pathParam = location.search.substr(1);
             if (pathParam.length > 0){
@@ -95,6 +96,7 @@ var Il2293 = (function(){
                     $('.content .team').html(infoContent.content.team);
                     $('.content .game-dur').html(infoContent.content.gameDur);
                     $('.content .location').html(infoContent.content.location);
+                    $('.content .cta-book-1').attr('href',infoContent.cta);
 
                     Object.keys(infoContent.imgs).forEach(function(imgKey,idx){
                         $($('#look-around img')[idx]).attr('src',infoContent.imgs[imgKey])
